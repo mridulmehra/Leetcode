@@ -9,7 +9,7 @@ public:
         while(r<n){
             vc[s[r] - 'A']++;
             maxf = max(maxf,vc[s[r]-'A']);
-            while(( r-l+1 - maxf) > k){
+            if(( r-l+1 - maxf) > k){
                 vc[s[l] - 'A']--;
                 maxf=0;
                 for(auto it : vc){
